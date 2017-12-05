@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 
 public class JediCrystals {
-    public static int x = 0;
 
-	private static int achieveBalance(Scanner sc, Integer r, Integer b, Integer g) {
+	private static int achieveBalance(Scanner sc) {
+		//System.out.println("This runs!");
 		/* Insert your code in here.
 		 *
 		 * Your code should use sc.nextLine() to read the input line by line; each line 
@@ -20,18 +20,29 @@ public class JediCrystals {
 		 */
 
 		/* End */
-        String temp = sc.nextLine();
-        if (temp.equals("R")) {
-            r++;
-        }
-        if (temp.equals("B")) {
-            b++;
-        }
-        if (temp.equals("G")) {
-            g++;
-        }
+        //System.out.println("honk");
 
-		return -1;
+        //System.out.println(temp);
+        int r=0,g=0,b=0;
+
+        do {
+            String temp = sc.nextLine();
+
+            if (temp.equals("R")) {
+                r++;
+                //System.out.println(r);
+            }
+            if (temp.equals("B")) {
+                b++;
+                //System.out.println(b);
+            }
+            if (temp.equals("G")) {
+                g++;
+                //System.out.println(g);
+            }
+        } while (r != b && r != g);
+
+		return r;
 	}
 
 
