@@ -23,27 +23,24 @@ public class JediCrystals {
         //System.out.println("honk");
 
         //System.out.println(temp);
-        int r=0,g=0,b=0;
+        int r = 0,b = 0,g = 0;
 
-        do {
-            String temp = sc.nextLine();
+		do {
+			String nextLine = sc.nextLine();
+			if (nextLine.equals("R")){
+				r++;
+			}
 
-            if (temp.equals("R")) {
-                r++;
-                //System.out.println(r);
-            }
-            if (temp.equals("B")) {
-                b++;
-                //System.out.println(b);
-            }
-            if (temp.equals("G")) {
-                g++;
-                //System.out.println(g);
-            }
-        } while (r != b && r != g);
+			else if (nextLine.equals("B")){
+				b++;
+			}
+			else {
+				g++;
+			}
+
+		} while ( r!=g || g!=b || b!=r);
 
 		return r;
-	}
 
 
 	public static void main(String[] args) {
