@@ -41,6 +41,7 @@ public class JediCrystals {
 		} while ( r!=g || g!=b || b!=r);
 
 		return r;
+	}
 
 
 	public static void main(String[] args) {
